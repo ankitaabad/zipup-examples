@@ -1,0 +1,12 @@
+@server=http://localhost:3000
+### create new post
+
+POST {{server}}/posts
+
+{
+  "title": "My First Post",
+  "content": "This is the content of my first post."
+}
+
+### get all posts
+GET {{server}}/posts
