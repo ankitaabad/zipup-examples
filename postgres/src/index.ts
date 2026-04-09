@@ -6,11 +6,11 @@ import ksuid from "ksuid";
 const app = new Hono();
 
 app.post("/posts", async (c) => {
-  const { title, content } = await c.req.json();
+  const { title, content, status } = await c.req.json();
   const id = ksuid.randomSync().string;
   console.log({ id, title, content });
   await db.insertInto("posts").values({ id, title, content }).execute();
-  return c.json({ id, title, content });
+  return c.json({ id, title, content, status });
 });
 
 app.get("/posts", async (c) => {

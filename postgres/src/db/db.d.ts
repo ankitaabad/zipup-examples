@@ -9,12 +9,15 @@ export type Generated<T> = T extends ColumnType<infer S, infer I, infer U>
   ? ColumnType<S, I | undefined, U>
   : ColumnType<T, T | undefined, T>;
 
+export type PostStatus = "ARCHIVED" | "DRAFT" | "PUBLISHED";
+
 export type Timestamp = ColumnType<Date, Date | string, Date | string>;
 
 export interface Posts {
   content: string;
   created_at: Generated<Timestamp>;
   id: string;
+  status: Generated<PostStatus>;
   title: string;
   updated_at: Generated<Timestamp>;
 }

@@ -6,7 +6,8 @@ POST {{server}}/posts
 
 {
   "title": "My First Post",
-  "content": "This is the content of my first post."
+  "content": "This is the content of my first post.",
+  "status" : "PUBLISHED"
 }
 
 ### get all posts
