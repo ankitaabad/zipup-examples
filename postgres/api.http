@@ -10,3 +10,4 @@ POST {{server}}/posts
 
 ### get all posts
 GET {{server}}/posts
+
