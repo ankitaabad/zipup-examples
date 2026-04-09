@@ -9,7 +9,8 @@
     "migrate": "node-pg-migrate",
     "up": "dotenv -e .env -- node-pg-migrate up",
     "down": "dotenv -e .env -- node-pg-migrate down",
-    "gen": "kysely-codegen --exclude-pattern=\"Pgmigrations\" --out-file ./src/db/db.d.ts"
+    "gen": "kysely-codegen --exclude-pattern=\"Pgmigrations\" --out-file ./src/db/db.d.ts",
+    "build": "node esbuild.cjs"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.6",
@@ -27,6 +28,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.19.30",
     "dotenv-cli": "^11.0.0",
+    "esbuild": "^0.28.0",
     "kysely-codegen": "^0.20.0",
     "node-pg-migrate": "^8.0.4",
     "tsx": "^4.7.1",

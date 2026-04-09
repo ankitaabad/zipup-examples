@@ -17,8 +17,6 @@ esbuild
     minify: true,
     target: ["node24"],
     outfile: "dist/index.js",
-
-    external: ["pg"],
     logLevel: "info",
     metafile: true
   })
