@@ -1,0 +1,23 @@
+@SERVER=fr.localhost:8080
+### get inmates
+GET http://{{SERVER}}/inmates
+
+
+### get guards
+GET http://{{SERVER}}/guards?rank=Captain
+
+
+### Add inmate
+POST http://{{SERVER}}/inmates
+
+ {
+    "name": "Ankit Aabad",
+    "alias": "Poison",
+    "cell": "A-28",
+    "skills": [
+      "sleeping"
+    ]
+  }
+
+// write to /data if you want to persist.
+//

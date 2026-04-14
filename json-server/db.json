@@ -1,0 +1,82 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+ "inmates": [
+    {
+      "id": 1,
+      "name": "Michael Scofield",
+      "alias": "Fish",
+      "cell": "A-23",
+      "status": "active",
+      "skills": ["planning", "engineering"]
+    },
+    {
+      "id": 2,
+      "name": "Lincoln Burrows",
+      "alias": "Linc",
+      "cell": "A-12",
+      "status": "death_row",
+      "skills": ["strength"]
+    },
+    {
+      "id": 3,
+      "name": "Fernando Sucre",
+      "alias": "Sucre",
+      "cell": "A-24",
+      "status": "active",
+      "skills": ["loyalty"]
+    }
+  ],
+  "guards": [
+    {
+      "id": 1,
+      "name": "Brad Bellick",
+      "rank": "Captain",
+      "shift": "day",
+      "corrupt": true
+    },
+    {
+      "id": 2,
+      "name": "Roy Geary",
+      "rank": "Officer",
+      "shift": "night",
+      "corrupt": false
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Map prison layout",
+      "assignedTo": 1,
+      "status": "completed",
+      "priority": "high"
+    },
+    {
+      "id": 2,
+      "title": "Access infirmary",
+      "assignedTo": 1,
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 3,
+      "title": "Distract guards",
+      "assignedTo": 3,
+      "status": "pending",
+      "priority": "medium"
+    },
+    {
+      "id": 4,
+      "title": "Acquire tools",
+      "assignedTo": 3,
+      "status": "pending",
+      "priority": "high"
+    },
+    {
+      "id": 5,
+      "title": "Disable surveillance",
+      "assignedTo": 2,
+      "status": "pending",
+      "priority": "critical"
+    }
+  ]
+}
