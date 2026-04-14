@@ -1,0 +1,43 @@
+{
+  "name": "postgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "dotenv -e .env -- tsx watch src/index.ts",
+    "migrate": "node-pg-migrate",
+    "up": "dotenv -e .env -- node-pg-migrate up",
+    "down": "dotenv -e .env -- node-pg-migrate down",
+    "gen": "kysely-codegen --exclude-pattern=\"Pgmigrations\" --out-file ./src/db/db.d.ts",
+    "build": "node esbuild.cjs"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.6",
+    "axios": "^1.13.2",
+    "fs-extra": "^11.3.3",
+    "hono": "^4.10.6",
+    "ksuid": "^3.0.0",
+    "kysely": "^0.28.15",
+    "pg": "^8.20.0",
+    "radash": "^12.1.1",
+    "senselogs": "^1.0.7",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.19.30",
+    "dotenv-cli": "^11.0.0",
+    "esbuild": "^0.28.0",
+    "kysely-codegen": "^0.20.0",
+    "node-pg-migrate": "^8.0.4",
+    "tsx": "^4.7.1",
+    "typescript": "^5.9.3",
+    "vite": "6",
+    "vitest": "^4.0.13"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0"
+}
