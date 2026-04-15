@@ -1,5 +1,4 @@
 {
-  "$schema": "./node_modules/json-server/schema.json",
  "inmates": [
     {
       "id": 1,
@@ -23,7 +22,7 @@
       "alias": "Sucre",
       "cell": "A-24",
       "status": "active",
-      "skills": ["loyalty"]
+      "skills": ["car theft"]
     }
   ],
   "guards": [
@@ -41,42 +40,6 @@
       "shift": "night",
       "corrupt": false
     }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "title": "Map prison layout",
-      "assignedTo": 1,
-      "status": "completed",
-      "priority": "high"
-    },
-    {
-      "id": 2,
-      "title": "Access infirmary",
-      "assignedTo": 1,
-      "status": "in_progress",
-      "priority": "high"
-    },
-    {
-      "id": 3,
-      "title": "Distract guards",
-      "assignedTo": 3,
-      "status": "pending",
-      "priority": "medium"
-    },
-    {
-      "id": 4,
-      "title": "Acquire tools",
-      "assignedTo": 3,
-      "status": "pending",
-      "priority": "high"
-    },
-    {
-      "id": 5,
-      "title": "Disable surveillance",
-      "assignedTo": 2,
-      "status": "pending",
-      "priority": "critical"
-    }
   ]
+
 }

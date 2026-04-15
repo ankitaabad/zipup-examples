@@ -1,23 +1,15 @@
-@SERVER=fr.localhost:8080
+@SERVER=https://sandbox.zipup.dev
 ### get inmates
-GET http://{{SERVER}}/inmates
+GET {{SERVER}}/inmates
 
 
 ### get guards
-GET http://{{SERVER}}/guards?rank=Captain
+GET {{SERVER}}/guards?rank=Captain
 
 
 ### Add inmate
-POST http://{{SERVER}}/inmates
+PATCH  {{SERVER}}/inmates/3
 
- {
-    "name": "Ankit Aabad",
-    "alias": "Poison",
-    "cell": "A-28",
-    "skills": [
-      "sleeping"
-    ]
-  }
-
-// write to /data if you want to persist.
-//
+{
+  "cell": "A-23"
+}
