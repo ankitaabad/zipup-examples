@@ -13,3 +13,6 @@ PATCH  {{SERVER}}/inmates/3
 {
   "cell": "A-23"
 }
+
+### Get tasks
+GET {{SERVER}}/tasks
