@@ -6,8 +6,7 @@ function fileExists() {
   return fs.existsSync(path.join("/", "data", "db.json"));
 }
 function init() {
-
-  const shouldReplace = !fileExists() || process.env.FORCE_RESET === "TRUE";
+  const shouldReplace = !fileExists();
   if (shouldReplace) {
     copyFile("./db.json", path.join("/", "data", "db.json"));
   }
