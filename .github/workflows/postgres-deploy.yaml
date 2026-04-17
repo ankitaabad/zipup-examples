@@ -15,6 +15,13 @@ jobs:
 
       - name: Write WireGuard config securely
         run: |
+          set -euo pipefail
+
+          if [ -z "${{ secrets.WG_CONFIG }}" ]; then
+            echo "WG_CONFIG secret is missing"
+            exit 1
+          fi
+
           echo "${{ secrets.WG_CONFIG }}" | sudo tee /etc/wireguard/wg0.conf > /dev/null
           sudo chmod 600 /etc/wireguard/wg0.conf
 
