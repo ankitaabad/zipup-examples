@@ -9,7 +9,7 @@ app.post("/posts", async (c) => {
   const { title, content, status } = await c.req.json();
   const id = ksuid.randomSync().string;
   console.log({ id, title, content });
-  await db.insertInto("posts").values({ id, title, content }).execute();
+  await db.insertInto("posts").values({ id, title, content, status }).execute();
   return c.json({ id, title, content, status });
 });
 

@@ -1,6 +1,6 @@
 {
-  "HOST": "https://cloud.zipup.dev",
-  "IGNORES": [
+  "host": "https://cloud.zipup.dev",
+  "ignore": [
     "**/zipup.config.json",
     "**/.git/**"
   ]
