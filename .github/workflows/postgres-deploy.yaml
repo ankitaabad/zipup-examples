@@ -6,9 +6,6 @@ on:
 jobs:
   Deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: postgres
 
     steps:
       - name: Install WireGuard
@@ -69,18 +66,21 @@ jobs:
           cache: "pnpm"
 
       - run: pnpm install --frozen-lockfile
-      
+        working-directory: postgres
+
       - name: Run migrations
         run: pnpm run migrate:up
+        working-directory: postgres
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
 
       - name: Build
         run: pnpm run build
-      
+        working-directory: postgres
       - name: deploy
         run: pnpm run deploy
+        working-directory: postgres
         env:
           ZIPUP_APP_KEY: ${{ secrets.ZIPUP_APP_KEY }}
           ZIPUP_SECRET_KEY: ${{ secrets.ZIPUP_SECRET_KEY }}
