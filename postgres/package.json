@@ -7,10 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "dotenv -e .env -- tsx watch src/index.ts",
     "migrate": "node-pg-migrate",
-    "up": "dotenv -e .env -- node-pg-migrate up",
-    "down": "dotenv -e .env -- node-pg-migrate down",
+    "migrate:up": "dotenv -e .env -- node-pg-migrate up",
+    "migrate:down": "dotenv -e .env -- node-pg-migrate down",
     "gen": "kysely-codegen --exclude-pattern=\"Pgmigrations\" --out-file ./src/db/db.d.ts",
-    "build": "node esbuild.cjs"
+    "build": "node esbuild.cjs", 
+    "deploy": "zipup deploy --build-folder dist"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.6",
@@ -34,7 +35,8 @@
     "tsx": "^4.7.1",
     "typescript": "^5.9.3",
     "vite": "6",
-    "vitest": "^4.0.13"
+    "vitest": "^4.0.13",
+    "zipup-cli": "^0.0.17"
   },
   "keywords": [],
   "author": "",
